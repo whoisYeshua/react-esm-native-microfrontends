@@ -1,0 +1,3 @@
+{
+  "extends": "@react-esm-native-microfrontends/tsconfig/tsconfig.base.json"
+}

@@ -1,0 +1,66 @@
+{
+  "name": "react-esm-native-microfrontends",
+  "version": "1.0.0",
+  "description": "Check modern ESM native microfrontends opportunities in React web application",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:host": "turbo run dev --filter ./apps/host",
+    "dev:header": "turbo run dev --filter ./apps/header",
+    "build": "turbo run build",
+    "build:body": "turbo run build --filter ./apps/body",
+    "build:header": "turbo run build --filter ./apps/header",
+    "build:host": "turbo run build --filter ./apps/host",
+    "preview": "turbo run preview",
+    "preview:watch": "turbo run preview:watch",
+    "watch": "turbo run watch",
+    "format": "turbo run format",
+    "format:eslint": "turbo run format:eslint",
+    "format:prettier": "turbo run format:prettier",
+    "lint": "turbo run lint --parallel",
+    "lint:eslint": "turbo run lint:eslint",
+    "lint:prettier": "turbo run lint:prettier",
+    "lint:ts": "turbo run lint:ts --parallel",
+    "clean": "turbo run clean && rimraf node_modules",
+    "generate": "turbo gen",
+    "graph:build": "turbo run build --graph=build.graph.png",
+    "graph:dev": "turbo run dev --graph=dev.graph.png",
+    "graph:format": "turbo run format --graph=lint.graph.png",
+    "graph:lint": "turbo run lint --graph=lint.graph.png",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.0.3",
+    "@commitlint/config-conventional": "^19.0.3",
+    "@turbo/gen": "1.12.4",
+    "@types/node": "20.11.17",
+    "check-dependency-version-consistency": "4.1.0",
+    "concurrently": "8.2.2",
+    "cross-env": "7.0.3",
+    "husky": "9.0.11",
+    "lint-staged": "15.2.2",
+    "prettier": "3.2.5",
+    "rimraf": "5.0.5",
+    "turbo": "1.12.4",
+    "typescript": "5.3.3"
+  },
+  "packageManager": "npm@9.8.1",
+  "engines": {
+    "node": ">=18.18",
+    "npm": ">=9"
+  },
+  "author": "whoisYeshua",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whoisYeshua/react-esm-native.git"
+  },
+  "bugs": {
+    "url": "https://github.com/whoisYeshua/react-esm-native/issues"
+  },
+  "homepage": "https://github.com/whoisYeshua/react-esm-native#readme"
+}

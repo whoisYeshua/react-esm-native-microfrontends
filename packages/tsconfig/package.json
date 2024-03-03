@@ -1,0 +1,13 @@
+{
+  "name": "@react-esm-native-microfrontends/tsconfig",
+  "version": "1.0.0",
+  "description": "Common Typescript config for react-esm-native-microfrontends",
+  "scripts": {
+    "format": "npm run format:prettier",
+    "format:prettier": "npm run lint:prettier -- --write",
+    "lint": "npm run lint:prettier",
+    "lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check --ignore-path ../../.prettierignore",
+    "clean": "rimraf .turbo dist node_modules",
+    "debug:prettier": "prettier \"./tsconfig.base.json\" --loglevel debug --ignore-path ../../.prettierignore"
+  }
+}

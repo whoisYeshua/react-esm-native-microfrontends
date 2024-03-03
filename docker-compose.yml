@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  header:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        MODULE: header
+    ports:
+      - "3031:80"
+    networks:
+      - microfrontend-network
+
+  body:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        MODULE: body
+    ports:
+      - "3032:80"
+    networks:
+      - microfrontend-network
+
+  host:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        MODULE: host
+    ports:
+      - "3030:80"
+    networks:
+      - microfrontend-network
+    depends_on:
+      - header
+      - body
+
+networks:
+  microfrontend-network:
+    driver: bridge

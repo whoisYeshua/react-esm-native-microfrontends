@@ -1,0 +1,4 @@
+{
+  "extends": "@react-esm-native-microfrontends/tsconfig/tsconfig.node.json",
+  "include": ["vite.config.ts"]
+}

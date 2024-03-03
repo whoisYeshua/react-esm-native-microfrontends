@@ -1,0 +1,40 @@
+{
+  "name": "@react-esm-native-microfrontends/header",
+  "version": "1.0.0",
+  "description": "header app in react-esm-native-microfrontends monorepo",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "preview:watch": "concurrently \"vite preview -l silent\" \"vite build --watch\"",
+    "format": "npm run format:eslint && npm run format:prettier",
+    "format:eslint": "npm run lint:eslint -- --fix",
+    "format:prettier": "npm run lint:prettier -- --write",
+    "lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:ts",
+    "lint:eslint": "eslint \"**/*.{js,ts,tsx}\"",
+    "lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check --ignore-path ../../.prettierignore",
+    "lint:ts": "tsc --noEmit",
+    "clean": "rimraf .turbo dist node_modules",
+    "debug:eslint": "eslint --print-config \"./src/index.ts\" > eslint-output-config.json",
+    "debug:prettier": "prettier \"./src/index.ts\" --loglevel debug --ignore-path ../../.prettierignore",
+    "debug:ts": "tsc --showConfig"
+  },
+  "devDependencies": {
+    "@react-esm-native-microfrontends/eslint-config": "*",
+    "@react-esm-native-microfrontends/helpers": "*",
+    "@react-esm-native-microfrontends/tsconfig": "*",
+    "@types/react": "18.2.61",
+    "@types/react-dom": "18.2.19",
+    "@vitejs/plugin-react-swc": "3.6.0",
+    "vite": "5.1.4"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "2.8.2",
+    "@emotion/cache": "11.11.0",
+    "@emotion/react": "11.11.4",
+    "framer-motion": "11.0.8",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
+}

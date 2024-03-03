@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/kamilkisiela/graphql-config/master/config-schema.json",
+  "projects": {
+    "body": {
+      "schema": "https://rickandmortyapi.com/graphql",
+      "documents": "./apps/body/src/**/*.{ts,tsx}",
+      "extensions": {
+        "codegen": {
+          "overwrite": true,
+          "generates": {
+            "./apps/body/src/types/codegen-gql.ts": {
+              "plugins": ["typescript", "typescript-operations"],
+              "config": {
+                "avoidOptionals": true,
+                "enumsAsTypes": true,
+                "maybeValue": "T",
+                "skipTypename": true
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

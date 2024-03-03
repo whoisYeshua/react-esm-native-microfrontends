@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" style="height: 100%">
+  <head>
+    <title>React ESM Native</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./favicon.ico" sizes="any" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- scripts -->
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/stable/react@18.2.0/es2022/react.mjs",
+          "react-dom/client": "https://esm.sh/stable/react-dom@18.2.0/es2022/client.js",
+          "graphql-request": "https://esm.sh/v128/graphql-request@5.2.0/es2022/graphql-request.mjs",
+          "@emotion/css": "https://esm.sh/v128/@emotion/css@11.10.6/es2022/css.mjs",
+          "framer-motion": "https://esm.sh/v135/framer-motion@11.0.8/es2022/framer-motion.mjs"
+        }
+      }
+    </script>
+    <link rel="modulepreload" href="https://esm.sh/stable/react@18.2.0/es2022/react.mjs" />
+    <link rel="modulepreload" href="https://esm.sh/stable/react-dom@18.2.0/es2022/client.js" />
+    <link rel="modulepreload" href="https://esm.sh/v128/react-dom@18.2.0/es2022/react-dom.mjs" />
+    <link rel="modulepreload" href="https://esm.sh/v128/scheduler@0.23.0/es2022/scheduler.mjs" />
+    <script src="./src/index.tsx" type="module"></script>
+  </head>
+  <body style="height: 100%">
+    <div id="app" style="height: 100%"></div>
+  </body>
+</html>
