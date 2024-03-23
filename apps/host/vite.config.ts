@@ -21,7 +21,11 @@ export default defineConfig({
   },
   plugins: [react()],
   build: {
+    target: 'esnext',
     minify: false,
+    modulePreload: {
+      polyfill: false,
+    },
     rollupOptions: {
       external: ['react', 'react-dom/client', 'framer-motion'],
     },

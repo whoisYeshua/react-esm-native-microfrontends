@@ -17,6 +17,7 @@ export default defineConfig({
   },
   plugins: [react()],
   build: {
+    target: 'esnext',
     minify: false,
     lib: {
       entry: 'src/App.tsx',
